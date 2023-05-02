@@ -50,7 +50,7 @@ img {
 }
 
 .register {
-    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
 }
 
 .login {
@@ -95,7 +95,7 @@ img {
 }
 
 .watchlist {
-    background-image: linear-gradient(to right, #98FB98 0%, #FDF0AA 51%, #98FB98 100%);
+    background-image: linear-gradient(to right, #cc1515 0%, #bd3e3e 51%, #0db90d 100%);
     color: rgba(0, 0, 0, 0.801);
 }
 
@@ -149,7 +149,7 @@ img {
 }
 
 .status--notwatching {
-    background: rgba(128, 194, 255, 0.8);
+    background: rgba(255, 128, 128, 0.8);
 }
 
 .container-body {

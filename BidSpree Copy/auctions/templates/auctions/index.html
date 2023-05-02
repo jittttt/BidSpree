@@ -12,7 +12,7 @@
             <div class="details">
                 <h5>{{ obj.name }}</h5>
                 <h6>Price: $<strong>{{ obj.startBid }}</strong></h6>
-                <small>Created: <strong>{{ obj.date|date:"d-m-Y" }}</strong></small><br>
+                <small>Created: <strong>{{ obj.date|date:"m-d-Y" }}</strong></small><br>
                 {% if obj.active %}
                 <span class="badge status--active">Active</span>
                 {% else %}
