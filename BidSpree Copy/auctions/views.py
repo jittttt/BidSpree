@@ -10,6 +10,7 @@ from django.contrib.auth import authenticate, login, logout
 
 from .models import User, Category, AuctionListing, Bid, Comment
 
+import datetime
 
 def index(request):
     obj = AuctionListing.objects.filter(active=True)
@@ -87,11 +88,15 @@ def createListing(request):
         category = Category.objects.get(id=request.POST["category"])
         user = request.user
         imageUrl = request.POST["url"]
+        endDate = request.POST.get("endDate")
+        if endDate:
+            endDate = datetime.datetime.strptime(endDate, "%Y-%m-%dT%H:%M")
+        else:
+            endDate = timezone.now() + datetime.timedelta(days=7)
         if imageUrl == '':
             imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png"
         listing = AuctionListing.objects.create(
-            name=title, category=category, date=timezone.now(), startBid=startBid, description=description, user=user, imageUrl=imageUrl, active=True)
-        listing.save()
+            name=title, category=category, date=timezone.now(), startBid=startBid, description=description, user=user, imageUrl=imageUrl, active=True, endDate=endDate)
         return HttpResponseRedirect(reverse("index"))
     return render(request, "auctions/createListing.html", {
         'categories': Category.objects.all()
@@ -110,7 +115,8 @@ def details(request, id):
         'item': item,
         'bids': bids,
         'comments': comments,
-        'bid': bid
+        'bid': bid,
+        'endDate': item.endDate,
     })
 
 
