@@ -59,7 +59,7 @@ img {
 
 
 .category {
-    background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%);
+    background-image: linear-gradient(to right, #2BC0E4 0%, #2BC0E4 51%, #2BC0E4 100%);
     color: rgba(0, 0, 0, 0.801);
 }
 
@@ -71,15 +71,15 @@ img {
 
 .grid-item {
     height: 4rem;
-    background-color: rgba(228, 197, 143, 0.692);
-    border: 3px solid rgb(255, 230, 186);
+    background-color: #e4c58fb0;
+    border: 3px solid #d0bf82;
     border-radius: 1rem;
     display: grid;
     align-content: center;
 }
 
 .add-listing {
-    background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%);
+    background-image: linear-gradient(to right, #4b8ae7 0%, #4b8ae7 51%, #4b8ae7 100%);
 }
 
 .add-category {
@@ -95,7 +95,7 @@ img {
 }
 
 .watchlist {
-    background-image: linear-gradient(to right, #cc1515 0%, #bd3e3e 51%, #0db90d 100%);
+    background-image: linear-gradient(to right, #4b8ae7 0%, #4b8ae7 51%, #4b8ae7 100%);
     color: rgba(0, 0, 0, 0.801);
 }
 
@@ -112,7 +112,7 @@ img {
 }
 
 .item {
-    background: rgba(255, 228, 181, 0.68);
+    background: #e3a869;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
     padding: 20px;
@@ -137,11 +137,11 @@ img {
 }
 
 .status--active {
-    background: rgba(190, 255, 92, 0.8);
+    background: rgba(156, 255, 7, 0.833);
 }
 
 .status--inactive {
-    background: rgba(255, 190, 92, 0.8);
+    background: #ee1212cc;
 }
 
 .status--watching {
@@ -149,7 +149,7 @@ img {
 }
 
 .status--notwatching {
-    background: rgba(255, 128, 128, 0.8);
+    background: rgba(85, 187, 245, 0.811);
 }
 
 .container-body {
@@ -165,7 +165,7 @@ body {
 }
 
 .inout {
-    background-color: rgba(247, 255, 224, 0.507);
+    background-color: #f7ffe081;
     backdrop-filter: blur(10px);
 }
 
